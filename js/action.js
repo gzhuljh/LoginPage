@@ -16,11 +16,14 @@ $("#submit").click(
 
 		// 发送请求
 		$.ajax({
-			url: "localhost:10086",
+			url: "http://localhost:10086/LoginDemo/LoginServlet",
 			type: "POST",
 			contentType: "applilcation/json",
-			data: {},
-			dataType: json,
+			data: {
+				username: usernameValue,
+				password: passwordValue
+			},
+			dataType: "jsonp",
 			success: function(data) {},
 			complete: function() {}
 		});
